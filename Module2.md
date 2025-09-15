@@ -134,10 +134,32 @@ graph TD
 
 ### Petri Nets
 
-*   A mathematical modeling language for the description of distributed systems and concurrent processes.
-*   A Petri net is a directed bipartite graph, with two types of nodes: **places** (representing conditions, shown as circles) and **transitions** (representing events, shown as bars or rectangles). Arcs connect places to transitions and transitions to places.
-*   **Tokens** (small black dots) reside in places and represent the state of the system. A transition can "fire" (occur) if all its input places have at least one token. When it fires, it consumes one token from each input place and produces one token in each output place.
-*   They are used to model and analyze system properties like reachability, liveness, and boundedness.
+Petri Nets are a powerful mathematical and graphical tool used for modeling and analyzing the behavior of discrete event dynamic systems. They are particularly useful for systems that have parallel or concurrent processes, where synchronization and resource sharing are important.
+
+A Petri Net is a directed bipartite graph, which means it has two types of nodes, and arcs only connect nodes of different types.
+
+*   **Places (P):** Represented by circles, places typically model conditions, states, or resources within the system. For example, a place could represent "File is available" or "User is logged in."
+*   **Transitions (T):** Represented by rectangles or bars, transitions model events or actions that can occur in the system, causing a change in state. For example, a transition could represent "Process File" or "Authenticate User."
+*   **Arcs:** Directed edges that connect places to transitions (input arcs) and transitions to places (output arcs). They show the flow and dependencies between conditions and events.
+*   **Tokens:** Represented by small black dots inside places. The distribution of tokens across the places defines the current state of the system. A place with a token indicates that the corresponding condition is true.
+
+A transition is **enabled** (can "fire") when all of its input places have at least one token. When a transition fires, it consumes one token from each input place and produces one token in each output place, thus changing the system's state.
+
+#### Formal Definition
+A basic Petri Net can be formally defined as a structure `N = <P, T, Pre, Post>`, where:
+*   `P` is a finite set of places.
+*   `T` is a finite set of transitions.
+*   `Pre` defines the input arcs from places to transitions.
+*   `Post` defines the output arcs from transitions to places.
+
+#### Types of Petri Nets
+Petri Nets come in different forms, varying in their modeling power and complexity:
+*   **Condition-Event Nets:** The simplest form, used for modeling simple interactions.
+*   **Place-Transition Nets:** A more common type used for systems of medium complexity, allowing multiple tokens in places.
+*   **Predicate-Transition Nets (or High-Level Petri Nets):** Used for modeling large and complex systems by allowing tokens to have values (e.g., colors, data structures).
+*   **Fuzzy Petri Nets:** An extension that incorporates fuzzy logic, allowing for the modeling of systems with uncertainty or imprecise information.
+
+Petri Nets are valuable in software engineering for performance evaluation, deadlock detection, and verifying the correctness of concurrent algorithms and protocols.
 
 ### Data Dictionary
 

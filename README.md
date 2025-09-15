@@ -11,3 +11,5 @@
 *   [SDLC](https://www.geeksforgeeks.org/software-engineering/top-8-software-development-models-used-in-industry/)
 
 *   [COCOMO](https://www.geeksforgeeks.org/software-engineering/software-engineering-cocomo-model/)
+
+*   [Petri](https://www.sciencedirect.com/topics/computer-science/petri-net)
